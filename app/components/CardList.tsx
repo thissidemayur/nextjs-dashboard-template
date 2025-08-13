@@ -233,7 +233,10 @@ export default function CardList({ title }: { title: string }) {
           >
             <div className=" h-12 rounded-sm relative overflow-hidden  w-12">
               <Image
-                src={item.image}
+                src={
+                  item.image ||
+                  "https://www.pexels.com/photo/green-and-blue-peacock-feather-674010/"
+                }
                 alt={item.title}
                 fill
                 className="object-cover"
