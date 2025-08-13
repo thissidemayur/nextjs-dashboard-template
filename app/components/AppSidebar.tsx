@@ -5,6 +5,7 @@ import {
   Calendar,
   ChevronDown,
   ChevronUp,
+  CreditCard,
   Home,
   Inbox,
   LogOut,
@@ -13,6 +14,7 @@ import {
   Projector,
   Search,
   Settings,
+  User,
   User2,
 } from "lucide-react";
 
@@ -51,8 +53,8 @@ import {
 // Menu items.
 const items = [
   {
-    title: "Home",
-    url: "#",
+    title: "Dashboard",
+    url: "/dashboard",
     icon: Home,
   },
   {
@@ -61,14 +63,14 @@ const items = [
     icon: Inbox,
   },
   {
-    title: "Calendar",
-    url: "#",
-    icon: Calendar,
+    title: "User",
+    url: "/dashboard/users/123",
+    icon: User,
   },
   {
-    title: "Search",
-    url: "#",
-    icon: Search,
+    title: "Payments",
+    url: "/dashboard/payments",
+    icon: CreditCard,
   },
   {
     title: "Settings",
