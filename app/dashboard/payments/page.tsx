@@ -1,3 +1,4 @@
+import BreadcrubNav from "@/app/components/BreadcrubNav";
 import { columns, Payment } from "./column";
 import { DataTable } from "./data-table";
 
@@ -221,11 +222,18 @@ async function getData(): Promise<Payment[]> {
   ];
 }
 
+// breadcrub
+const breadcrubNavItems = [
+  { label: "Dashboard", href: "/dashboard" },
+  { label: "Payment" },
+];
+
 export default async function PaymentPage() {
   const data = await getData();
 
   return (
     <div className="pr-4 pl-2">
+      <BreadcrubNav items={breadcrubNavItems} />
       <div className="mb px-4 py-2 bg-muted rounded-md">
         <h1 className="font-semibold pb-5">All Payments</h1>
         <div>
