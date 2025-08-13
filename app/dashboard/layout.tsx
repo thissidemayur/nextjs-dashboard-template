@@ -1,5 +1,5 @@
 import React from "react";
-
+import Navbar from "../components/Navbar";
 import { SidebarProvider } from "@/components/ui/sidebar";
 import { AppSidebar } from "../components/AppSidebar";
 import { cookies } from "next/headers";
@@ -15,7 +15,9 @@ export default async function DashboardLayout({
     <SidebarProvider defaultOpen={defaultOpen}>
       <AppSidebar />
       <main className="w-full h-screen">
-        <div className="flex  w-full"></div>
+        <div className="flex  w-full">
+          <Navbar />
+        </div>
 
         {children}
       </main>
